@@ -11,17 +11,17 @@ public class SYSubwoofer
 
 		
 		//prompt for user input
-		System.out.println("Please enter the height: ");
+		System.out.println("Please enter the height (inches): ");
 		double height = keyboard.nextDouble();
-		System.out.println("Please enter the length: ");
+		System.out.println("Please enter the length (inches): ");
 		double length = keyboard.nextDouble();
-		System.out.println("Please enter the width: ");
+		System.out.println("Please enter the width (inches): ");
 		double width = keyboard.nextDouble();
 	
 		SYSubwoofer volume = new SYSubwoofer();
 		
 		double box = volume.calcVol(height, length, width);
-		System.out.printf("The total volume of your subwoofer box is %4.2f\n", box);
+		System.out.printf("The total volume of your subwoofer box, in cubic feet, is %4.2f\n", box);
 	}
 	
 	public double calcVol(double height, double length, double width)
