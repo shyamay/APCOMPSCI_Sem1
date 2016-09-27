@@ -1,4 +1,4 @@
-public class asSY
+public class asSY2
 {
 	public static void main (String[]args)
 	{
