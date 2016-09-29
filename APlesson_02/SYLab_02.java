@@ -10,10 +10,9 @@ public class SYLab_02
 		
 		String name = "Shyama Yallapragada";
 		String address = "3527 Meadows Lane";
-		String city = "San Diego";
-		String zip = "92130";
+		String city = "San Diego, CA 92130";
 		
-		System.out.println(name + "\n" + address + "\n" + city + "\n" + zip);
+		System.out.println(name + "\n" + address + "\n" + city);
 		
 		int a = 15;
 		int b = 17;
