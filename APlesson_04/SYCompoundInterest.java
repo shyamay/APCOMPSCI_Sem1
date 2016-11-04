@@ -1,17 +1,22 @@
+import java.util.Scanner;
 public class SYCompoundInterest
 {
 	public static void main(String[]args)
 	{
-		SYCompoundInterest loan = new SYCompoundInterest();
-		int r = 3;
-		int P = 35;
-		int n = 2;
-		int t = 5;
-		double comp = loan.calcInterest(r, P, n, t);
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Enter the interest rate: ");
+		int r = kb.nextInt();
+		System.out.println("Enter the original amount you intend to borrow: ");
+		int P = kb.nextInt();
+		System.out.println("Enter the number of times the loan is compounded per year: ");
+		int n = kb.nextInt();
+		System.out.println("Enter the life of the loan in years: ");
+		int t = kb.nextInt();
+		double comp = calcInterest(r, P, n, t);
 		System.out.printf("Your total cost of the loan is $%4.2f\n", comp);
 	}
 	
-	public double calcInterest(int r, int P, int n, int t)
+	public static double calcInterest(int r, int P, int n, int t)
 	{
 		return((P*(1+r/n))^(n*t))/(12*t);
 	}
