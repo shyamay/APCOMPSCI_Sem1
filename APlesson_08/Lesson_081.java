@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class CountDigits
+public class Lesson_081
 {
 	public static void main(String[]args)
 	{
