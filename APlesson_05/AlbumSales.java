@@ -2,6 +2,7 @@ public class AlbumSales
 {
 	public static void main(String[]args)
 	{
+		
 		String name = "James Brown";
 		int units = 1500000;
 		String category = "";
