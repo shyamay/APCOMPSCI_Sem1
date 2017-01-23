@@ -11,20 +11,16 @@ public class First_Letter
 		{
 			words[i] = kb.next();
 		}
-		
+		System.out.println(first(words));
+	}
+	
+	public static String first(String[] words)
+	{
+		String firstlet = "";
 		for(String word : words)
 		{
-			System.out.println(word);
-			System.out.println("\"" + word + "\", ");
+			firstlet += word.substring(0,1) + " ";
 		}
-		
-		first(words);
-	}
-	public static void first(String[] w)
-	{
-		for(int i = w.length + 1; i >= 0; i++)
-		{
-			System.out.println(w[i]);
-		}
+		return firstlet;
 	}
 }
