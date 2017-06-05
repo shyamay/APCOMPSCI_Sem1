@@ -60,9 +60,13 @@ public class Magpie2
 			&& findKeyword(statement, "me", psn) >= 0)
 			{
 				response = transformYouMeStatement(statement);
-            }
+			}
+			
 			else
 			{
+				psn = findKeyword(statement, "I", 0);
+				if(psn >=0 && findKeyword(statement, "you", psn) >= 0)
+					response = transformIYouStatement(statement)
 			response = getRandomResponse();
 			}
 
@@ -157,8 +161,9 @@ public class Magpie2
 		}
 
 		int psnOfI = findKeyword("I",statement, 0);
-		int psnOfyou = findKeyword(psnOfI + 3, statement, "you.");
+		int psnOfyou = findKeyword(statement, "you", psnOfI + 3);
 		String restOfStatement = statement.substring(psnOfI + 3, psnOfyou);
+		
 		return "Why do you " + restOfStatement + "me?";
 		
 	}
